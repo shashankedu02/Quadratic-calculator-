@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quadratic Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="calculator">
+    <p class="eyebrow">Math tool</p>
+    <h1>Quadratic Calculator</h1>
+    <p class="intro">Solve equations in the form <strong>ax² + bx + c = 0</strong>.</p>
+
+    <form id="quadratic-form">
+      <div class="coefficients">
+        <label>a <input id="a" name="a" type="number" step="any" value="1" required></label>
+        <label>b <input id="b" name="b" type="number" step="any" value="-5" required></label>
+        <label>c <input id="c" name="c" type="number" step="any" value="6" required></label>
+      </div>
+      <button type="submit">Solve equation</button>
+    </form>
+
+    <section id="result" class="result" aria-live="polite">
+      Enter coefficients and select “Solve equation”.
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
