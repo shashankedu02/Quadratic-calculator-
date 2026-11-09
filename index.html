@@ -10,7 +10,7 @@
   <main class="calculator">
     <p class="eyebrow">Math tool</p>
     <h1>Quadratic Calculator</h1>
-    <p class="intro">Solve equations in the form <strong>ax² + bx + c = 0</strong>.</p>
+    <p class="intro">Solve and explore equations in the form <strong>ax² + bx + c = 0</strong>.</p>
 
     <form id="quadratic-form">
       <div class="coefficients">
@@ -20,6 +20,17 @@
       </div>
       <button type="submit">Solve equation</button>
     </form>
+
+    <section class="graph-panel" aria-labelledby="graph-title">
+      <div class="graph-heading">
+        <div>
+          <h2 id="graph-title">Interactive graph</h2>
+          <p>Drag any purple point up or down to change the equation.</p>
+        </div>
+        <span class="legend"><i></i> curve controls</span>
+      </div>
+      <canvas id="graph" width="720" height="400" aria-label="Interactive quadratic graph"></canvas>
+    </section>
 
     <section id="result" class="result" aria-live="polite">
       Enter coefficients and select “Solve equation”.
