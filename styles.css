@@ -16,7 +16,7 @@ body {
 }
 
 .calculator {
-  width: min(100%, 680px);
+  width: min(100%, 760px);
   background: #fff;
   padding: clamp(28px, 6vw, 52px);
   border-radius: 24px;
@@ -67,6 +67,52 @@ button {
 
 button:hover { background: #5046e5; }
 
+.graph-panel {
+  margin-top: 32px;
+  padding: 20px;
+  border: 1px solid #e5e9f2;
+  border-radius: 16px;
+  background: #fbfcff;
+}
+
+.graph-heading {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+h2 { margin: 0; font-size: 1.1rem; }
+.graph-heading p { margin: 5px 0 0; color: #5b6474; font-size: .92rem; }
+
+.legend {
+  white-space: nowrap;
+  font-size: .78rem;
+  color: #5b6474;
+  padding-top: 4px;
+}
+
+.legend i {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  margin-right: 4px;
+  border-radius: 50%;
+  background: #635bff;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 260px;
+  border-radius: 10px;
+  background: #fff;
+  cursor: ns-resize;
+  touch-action: none;
+}
+
 .result {
   margin-top: 28px;
   padding: 20px;
@@ -77,6 +123,8 @@ button:hover { background: #5046e5; }
 
 .result.error { background: #fff1f1; color: #a51d2d; }
 
-@media (max-width: 480px) {
+@media (max-width: 540px) {
   .coefficients { grid-template-columns: 1fr; }
+  .graph-heading { display: block; }
+  .legend { display: inline-block; margin-top: 10px; }
 }
